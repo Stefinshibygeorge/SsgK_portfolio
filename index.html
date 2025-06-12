@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Personal Portfolio</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+    <div id="header">
+        <div class="container">
+              <nav>
+                <img src="images/name_logo.png" alt="Logo" class="logo">
+                  <ul>
+                    <li><a href="#">About</a></li>
+                    <li><a href="#">Education</a></li>
+                    <li><a href="#">Skills</a></li>
+                    <li><a href="#">Projects</a></li>
+                    <li><a href="#">Contact</a></li>
+                  </ul>
+              </nav>
+              <div class="intro">
+                  <h1>Hey ✌️,</h1>
+                  <h1>I'm <span class="name">Stefin</span> <span class="subname">Shiby George</span></h1>
+                  <p>Discover my journey, skills, and projects...</p>
+              </div>
+        </div>
+    </div>
+
+<!--------------------------- About------------------------------>
+
+
+    <div id="about">
+        <div class="container">
+              <div class="row">
+ 
+                    <div class="about_col_1">
+                          <img src="images/Ssg.jpg" alt="Profile Picture" class="profile_pic">
+                    </div>
+
+                    <div class="about_col_2">
+                        <h1 class = h1_about_col_2>About Me</h1>
+                        <p class="p_about_col_2">I am a passionate and dedicated individual with a keen interest in technology and design. My journey has been shaped by a love for learning and a desire to create impactful solutions. I thrive in collaborative environments and enjoy tackling challenges that push my boundaries.</p>
+                        <div class="tab_titles">
+                            <p class="tab_links active-link" onclick="opentab('skills')">Skills</p>
+                            <p class="tab_links" onclick="opentab('core competencies')">Core Competencies</p>
+                            <p class="tab_links" onclick="opentab('education')">Education</p>
+                            <p class="tab_links" onclick="opentab('experience')">Experience</p>
+                        </div>
+                        <div class="tab_contents active-tab" id = 'skills'>
+                          <ul>
+                            <li class="skills_list"><span>Deep Learning</span><br>Tensorflow</li>
+                            <li class="skills_list"><span>Image Processing</span><br>Opencv</li>
+                            <li class="skills_list"><span>Data Analysis</span><br>Pandas, Power BI</li>
+                            <li class="skills_list"><span>Python Programming</span></li>
+                            <li class="skills_list"><span>C programming</span></li> 
+                            <li class="skills_list"><span>Assembly programming</span></li> 
+                            <li class="skills_list"><span>Xilinx Vivado & Verilog</span></li>                        
+                          </ul>
+                        </div>
+                        <div class="tab_contents" id = 'core competencies'>
+                          <ul>
+                            <li class="skills_list"><span>Digital Electronics</span></li>
+                            <li class="skills_list"><span>Analog Electronics</span></li>
+                            <li class="skills_list"><span>VLSI & CMOS Circuits</span></li>
+                            <li class="skills_list"><span>Embedded Systems</span></li>
+                            <li class="skills_list"><span>Computer Networks</span><br>TCP/IP Protocols</li>
+                            <li class="skills_list"><span>Communication Protocols</span><br>Serial, I2C</li>
+                          </ul>
+                        </div>
+
+                        <div class="tab_contents" id = 'experience'>
+                          <ul>
+                            <li class="skills_list">
+                              <span>ADAS Lead - Mavericks, RIT</span><br>
+                              July 2023 – July 2024<br>
+                              Led a team to develop ADAS systems using Deep Learning, sensors, and microcontrollers.
+                            </li>
+                            <li class="skills_list">
+                              <span>Digital IC Design Intern - Digital University Kerala</span><br>
+                              November 2024<br>
+                              Developed Verilog code for ALU components and tested using simulation tools.
+                            </li>
+                          </ul>
+                        </div>
+
+                        <div class="tab_contents" id = 'education'>
+                          <ul>
+                            <li class="skills_list">
+                              <span>B.Tech in Electronics and Communication Engineering</span><br>
+                              Rajiv Gandhi Institute of Technology, Kottayam<br>
+                              July 2021 – June 2025<br>
+                              Minor in Machine Learning | Honours in VLSI, FPGA & Nanomaterials<br>
+                              CGPA: 9.3
+                            </li>
+                          </ul>
+                        </div>
+
+                    </div>
+              </div>            
+        </div>
+
+<script>
+  var tab_contents = document.getElementsByClassName("tab_contents");
+  var tab_links = document.getElementsByClassName("tab_links");
+
+  function opentab(tabname) {
+    for (let link of tab_links) {
+      link.classList.remove("active-link");
+    }
+    for (let content of tab_contents) {
+      content.classList.remove("active-tab");
+    }
+
+    event.currentTarget.classList.add("active-link");
+    document.getElementById(tabname).classList.add("active-tab");
+  }
+</script>
+
+
+
+
+
+
+
+
+
+<!--------------------------- Contact------------------------------>
+<div class="contact">
+  <div class="container">
+    <div class="row">
+      <div class="contact_left">
+        <h1 class="h1_contact_left">Contact Me</h1>
+        <p class="p_contact_left" style="margin-top:20px;">Feel free to reach out for collaborations, inquiries, or just a chat!</p>
+        </p>
+        <div class="contact_details">
+          <p>
+            <strong>Email:</strong>
+            <a href="mailto:stefinshiby@gmail.com" class="contact_link">stefinshiby@gmail.com</a>
+          </p>
+          <p>
+            <strong>Phone:</strong>
+            <a href="tel:7306643570" class="contact_link">7306643570</a>
+          </p>
+        <div class="social_icons">
+          <a href ="https://www.linkedin.com/in/StefinShibyGeorge/"><i class="fa-brands fa-linkedin-in"></i></a>
+          <a href ="https://github.com/Stefinshibygeorge"><i class="fa-brands fa-github"></i></a>
+      </div>
+    </div>
+  </div>
+</div>
+       
+</body>
+</html>
